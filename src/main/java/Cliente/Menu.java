@@ -1,39 +1,28 @@
 package Cliente;
 
-import decorador.MaquinaPrincipal;
-import factory.factoria.Dialog;
-
+import Temple.HaltChekerTemple;
+import Temple.ImpresoraTemple;
+import Temple.MaquinaPrincipal;
+import Temple.NegatorTemple;
 import java.util.Scanner;
 
-public class Menu {
-    private static Dialog dialogImpresora;
-    private static Dialog dialogHaltCheker;
-    private static Dialog dialogNegator;
-
-    private static MaquinaPrincipal maquinaPrincipal;
-/*
-    public static void main(String[] args) {
-        configure();
-        runBusinessLogic();
-    }
-
-    static void configure() {
-        dialogImpresora = new factory.factoria.ImpresoraDialog();
-        dialogHaltCheker = new factory.factoria.HaltChekerDialog();
-        dialogNegator = new factory.factoria.NegatorDialog();
-    }
-
-    static void runBusinessLogic() {
-        dialogImpresora.ejecutarMaquina(String );
-
-        dialogHaltCheker.ejecutarMaquina();
-        dialogNegator.ejecutarMaquina();
-    }
-
-    static void impresora() {
+public abstract class Menu {
+    public static String preguntarInput(){
+        System.out.println("Introduce el texto a procesar");
         Scanner sc = new Scanner(System.in);
-        maquinaPrincipal.input(sc.nextLine());
-        maquinaPrincipal.ejecutarMaquinaPrincipal();
+        String input = sc.nextLine();
+        return input;
     }
-*/
+
+    public static void menu() {
+        String input = preguntarInput();
+        MaquinaPrincipal maquinaImpresora = new ImpresoraTemple();
+        String text1 = maquinaImpresora.ejecutarMP(input);
+        MaquinaPrincipal maquinaHaltCheker = new HaltChekerTemple();
+        String text= maquinaHaltCheker.ejecutarMP(text1);
+        MaquinaPrincipal maquinaNegator = new NegatorTemple();
+        maquinaNegator.ejecutarMP(text);
+    }
+
+
 }
