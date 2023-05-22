@@ -10,8 +10,7 @@ public abstract class Menu {
     public static String preguntarInput(){
         System.out.println("Introduce el texto a procesar");
         Scanner sc = new Scanner(System.in);
-        String input = sc.nextLine();
-        return input;
+        return sc.nextLine();
     }
 
     public static void menu() {
