@@ -4,15 +4,27 @@ import factory.factoria.Dialog;
 
 public class Demo {
     public static void main(String[] args) {
-        Dialog dialog;
+
         MaquinaCompleta maquinaPrincipalComposite = new MaquinaCompleta();
-        dialog = new factory.factoria.ImpresoraDialog();
-        maquinaPrincipalComposite.addMaquina(dialog);
-        dialog = new factory.factoria.HaltChekerDialog();
-        maquinaPrincipalComposite.addMaquina(dialog);
-        dialog = new factory.factoria.NegatorDialog();
-        maquinaPrincipalComposite.addMaquina(dialog);
-        maquinaPrincipalComposite.ejecutarMP("Hola mundo");
+        Dialog dialogImpresora = new factory.factoria.ImpresoraDialog();
+        maquinaPrincipalComposite.addMaquina(dialogImpresora);
+        String outputImpresora = maquinaPrincipalComposite.ejecutarMP("lol");
+
+        Dialog dialogHalCheker = new factory.factoria.HaltChekerDialog();
+        maquinaPrincipalComposite.addMaquina(dialogHalCheker);
+        maquinaPrincipalComposite.removeMaquina(dialogImpresora);
+        maquinaPrincipalComposite.ejecutarMP(outputImpresora);
+
+        Dialog dialogNegator = new factory.factoria.NegatorDialog();
+        maquinaPrincipalComposite.addMaquina(dialogNegator);
+        maquinaPrincipalComposite.removeMaquina(dialogHalCheker);
+        maquinaPrincipalComposite.ejecutarMP(outputImpresora);
+
+
+
+       // dialog = new factory.factoria.NegatorDialog();
+       // maquinaPrincipalComposite.addMaquina(dialog);
+
 
     }
 }

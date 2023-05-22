@@ -5,9 +5,10 @@ import factory.maquina.Button;
 
 
 public abstract class Dialog {
-    public void ejecutarMaquina(String texto) {
+    public String ejecutarMaquina(String texto) {
         Button maquina = createButton();
-        maquina.ejecutar(texto);
+        String output = maquina.ejecutar(texto);
+        return output;
     }
 
     protected abstract Button createButton();

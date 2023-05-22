@@ -1,6 +1,6 @@
 package decorador;
 
-/*public class DefMaquinaPrincipal implements MaquinaPrincipal {
+public class DefMaquinaPrincipal implements MaquinaPrincipal {
     private MaquinaPrincipal interfazPrincipal;
 
     public DefMaquinaPrincipal(MaquinaPrincipal interfazPrincipal){
@@ -9,17 +9,16 @@ package decorador;
 
     @Override
     public String input(String input) {
-        interfazPrincipal.input(input);
-        return input;
+        return interfazPrincipal.input(input);
     }
 
     @Override
-    public String output() {
-        return interfazPrincipal.output();
+    public String output(String output) {
+        return interfazPrincipal.output(output);
     }
 
     @Override
-    public void ejecutarMaquinaPrincipal() {
-        interfazPrincipal.ejecutarMaquinaPrincipal();
+    public String ejecutarMaquinaPrincipal() {
+        return interfazPrincipal.ejecutarMaquinaPrincipal();
     }
-}*/
+}

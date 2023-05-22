@@ -17,14 +17,16 @@ public class MaquinaComposite implements MaquinaPrincipalComposite{
         maquinaPrincipalComposites.add(maquinaPrincipalComposite);
     }
 
-    public void removeMaquina(MaquinaPrincipalComposite maquinaPrincipalComposite) {
+    public void removeMaquina(Dialog maquinaPrincipalComposite) {
         maquinaPrincipalComposites.remove(maquinaPrincipalComposite);
     }
 
     @Override
-    public void ejecutarMP(String input) {
+    public String ejecutarMP(String input) {
        for (Dialog maquinaPrincipalComposite : maquinaPrincipalComposites) {
-           maquinaPrincipalComposite.ejecutarMaquina(input);
+          String output = maquinaPrincipalComposite.ejecutarMaquina(input);
+            input = output;
        }
+       return input;
     }
 }
