@@ -1,4 +1,7 @@
 # PruebaDePatrones
+
+link: https://github.com/alicmade/PruebaDePatrones.git
+
 En este proyecto trataremos el problema del Par de Turing se refiere a la imposibilidad de diseñar un algoritmo general que pueda determinar si una máquina de Turing se detendrá o no al ser emparejada con otra máquina. Este problema establece límites fundamentales en la capacidad de las máquinas de Turing y tiene implicaciones importantes en la teoría de la computabilidad.
 
 He utilizado el patrón abstract fatory para crear las tres máquinas, ya que es un patrón de diseño creacional que nos permite producir familias de objetos relacionados sin especificar sus clases concretas.
