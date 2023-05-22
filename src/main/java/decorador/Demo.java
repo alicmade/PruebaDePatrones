@@ -1,2 +1,7 @@
-package decorador;public class Demo {
-}
+package decorador;
+
+public class Demo {
+
+
+    }
+

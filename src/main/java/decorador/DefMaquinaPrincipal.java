@@ -1,15 +1,16 @@
 package decorador;
 
-public class FileInterfazPrincipal implements InterfazPrincipal{
-    private InterfazPrincipal interfazPrincipal;
+/*public class DefMaquinaPrincipal implements MaquinaPrincipal {
+    private MaquinaPrincipal interfazPrincipal;
 
-    public FileInterfazPrincipal(InterfazPrincipal interfazPrincipal){
+    public DefMaquinaPrincipal(MaquinaPrincipal interfazPrincipal){
         this.interfazPrincipal = interfazPrincipal;
     }
 
     @Override
-    public void input(String input) {
+    public String input(String input) {
         interfazPrincipal.input(input);
+        return input;
     }
 
     @Override
@@ -21,4 +22,4 @@ public class FileInterfazPrincipal implements InterfazPrincipal{
     public void ejecutarMaquinaPrincipal() {
         interfazPrincipal.ejecutarMaquinaPrincipal();
     }
-}
+}*/

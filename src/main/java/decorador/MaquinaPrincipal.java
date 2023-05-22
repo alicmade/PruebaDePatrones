@@ -1,7 +1,7 @@
 package decorador;
 
-public interface InterfazPrincipal {
-    void input(String input);
-    String output();
-    void ejecutarMaquinaPrincipal();
+public interface MaquinaPrincipal {
+    String input(String input);
+    String output(String output);
+    String ejecutarMaquinaPrincipal();
 }

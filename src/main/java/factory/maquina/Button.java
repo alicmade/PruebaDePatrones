@@ -1,5 +1,5 @@
 package factory.maquina;
 
-public interface Maquina {
+public interface Button {
     String ejecutar(String texto);
 }

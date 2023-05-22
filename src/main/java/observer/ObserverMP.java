@@ -1,2 +1,5 @@
-package observer;public interface ObserverMP {
+package observer;
+
+public interface ObserverMP {
+    void ejecutarMaquinaPrincipal();
 }

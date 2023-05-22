@@ -1,2 +1,4 @@
-package Cliente;public class Main {
+package Cliente;
+
+public class Main {
 }
