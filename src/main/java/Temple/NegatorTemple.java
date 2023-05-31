@@ -2,7 +2,7 @@ package Temple;
 
 import factory.factoria.Dialog;
 
-public class NegatorTemple extends MaquinaCompleta{
+public class NegatorTemple extends MaquinaPrincipal{
 
                 public NegatorTemple() {
                     super();
